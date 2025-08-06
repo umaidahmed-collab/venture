@@ -14,8 +14,26 @@ TODO: Implement FastAPI application with the following features:
 
 from fastapi import FastAPI
 
-# TODO: Implement the FastAPI application
-app = FastAPI(title="Make a python UI with Tkinter to implement restaurant billing system")
+from fastapi import FastAPI, HTTPException
+from pydantic import BaseModel
+
+class Item(BaseModel):
+    name: str
+    price: float
+    quantity: int
+
+class Bill(BaseModel):
+    total: float
+
+app = FastAPI(title="Restaurant Billing System")
+
+@app.post("/bill", response_model=Bill)
+def calculate_bill(item: Item):
+    try:
+        total = item.price * item.quantity
+        return {"total": total}
+    except Exception as e:
+        raise HTTPException(status_code=400, detail=str(e))
 
 @app.get("/")
 def read_root():
