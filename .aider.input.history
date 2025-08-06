@@ -26,3 +26,83 @@
 +
 +            Make the necessary changes to complete this step.
 +            
+
+# 2025-08-06 13:30:44.275033
++TASK: Implement a basic UI application for login and registeration of user
++DESCRIPTION: Make a python UI and Basic Auth
++
++CURRENT STEP: Implement core functionality
++
++You are implementing a Authentication system.
++
++SPECIFIC REQUIREMENTS:
++
++            - Implement JWT token-based authentication
++            - Create user registration and login endpoints
++            - Add password hashing and validation
++            - Include token refresh functionality
++            - Add proper security middleware
++            
++
++GENERAL GUIDELINES:
++1. Write clean, maintainable, production-ready code
++2. Follow existing code patterns and conventions in the repository
++3. Add comprehensive error handling and input validation
++4. Include detailed docstrings and comments
++5. Use type hints throughout the code
++6. Create functional, working implementations (not placeholders)
++7. Add unit tests if this step involves testing
++8. Update documentation if this step involves documentation
++
++IMPLEMENTATION INSTRUCTIONS:
++- Create actual working code files that implement the requirements
++- Ensure all functions and classes are fully implemented
++- Add proper imports and dependencies
++- Make sure the code can be executed and tested
++- Follow the specific requirements for Authentication system
++- Replace any placeholder content with functional code
++- Create new files if needed to implement the functionality
++
++IMPORTANT: You MUST create or modify files to implement the functionality. Do not just analyze - actually write the code!
++
++Please implement this step completely and functionally. Create or modify the necessary files to fulfill this requirement.
+
+# 2025-08-06 13:30:44.275058
++TASK: Implement a basic UI application for login and registeration of user
++DESCRIPTION: Make a python UI and Basic Auth
++
++CURRENT STEP: Implement core functionality
++
++You are implementing a Authentication system.
++
++SPECIFIC REQUIREMENTS:
++
++            - Implement JWT token-based authentication
++            - Create user registration and login endpoints
++            - Add password hashing and validation
++            - Include token refresh functionality
++            - Add proper security middleware
++            
++
++GENERAL GUIDELINES:
++1. Write clean, maintainable, production-ready code
++2. Follow existing code patterns and conventions in the repository
++3. Add comprehensive error handling and input validation
++4. Include detailed docstrings and comments
++5. Use type hints throughout the code
++6. Create functional, working implementations (not placeholders)
++7. Add unit tests if this step involves testing
++8. Update documentation if this step involves documentation
++
++IMPLEMENTATION INSTRUCTIONS:
++- Create actual working code files that implement the requirements
++- Ensure all functions and classes are fully implemented
++- Add proper imports and dependencies
++- Make sure the code can be executed and tested
++- Follow the specific requirements for Authentication system
++- Replace any placeholder content with functional code
++- Create new files if needed to implement the functionality
++
++IMPORTANT: You MUST create or modify files to implement the functionality. Do not just analyze - actually write the code!
++
++Please implement this step completely and functionally. Create or modify the necessary files to fulfill this requirement.
