@@ -26,3 +26,35 @@
 +
 +            Make the necessary changes to complete this step.
 +            
+
+# 2025-08-06 12:32:01.075693
++Task: Make a FAST API for the JWT Auth System
++        Description: FAST API with complete Auth
++
++        Step to implement: Implement core functionality
++
++        Please implement this functionality following these guidelines:
++        1. Write clean, maintainable code
++        2. Follow existing code patterns and conventions
++        3. Add appropriate error handling
++        4. Include docstrings and comments
++        5. Ensure the code is production-ready
++        6. Add type hints where applicable
++
++        Make the necessary changes to implement this requirement.
+
+# 2025-08-06 12:32:01.075712
++Task: Make a FAST API for the JWT Auth System
++        Description: FAST API with complete Auth
++
++        Step to implement: Implement core functionality
++
++        Please implement this functionality following these guidelines:
++        1. Write clean, maintainable code
++        2. Follow existing code patterns and conventions
++        3. Add appropriate error handling
++        4. Include docstrings and comments
++        5. Ensure the code is production-ready
++        6. Add type hints where applicable
++
++        Make the necessary changes to implement this requirement.
