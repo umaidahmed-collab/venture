@@ -15,25 +15,30 @@ TODO: Implement FastAPI application with the following features:
 from fastapi import FastAPI
 
 from fastapi import FastAPI, HTTPException
-from pydantic import BaseModel
+from pydantic import BaseModel, Field
 
 class Item(BaseModel):
     name: str
-    price: float
-    quantity: int
+    price: float = Field(..., gt=0)
+    quantity: int = Field(..., gt=0)
 
 class Bill(BaseModel):
     total: float
 
 app = FastAPI(title="Restaurant Billing System")
 
+from fastapi import Depends
+from pydantic import ValidationError
+
 @app.post("/bill", response_model=Bill)
-def calculate_bill(item: Item):
+def calculate_bill(item: Item = Depends()):
     try:
         total = item.price * item.quantity
         return {"total": total}
+    except ValidationError as e:
+        raise HTTPException(status_code=400, detail=e.errors())
     except Exception as e:
-        raise HTTPException(status_code=400, detail=str(e))
+        raise HTTPException(status_code=500, detail=str(e))
 
 @app.get("/")
 def read_root():
