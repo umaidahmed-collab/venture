@@ -1,3 +1,4 @@
+from models import BMIRequest, BMIResponse
 from pydantic import BaseModel, Field
 
 class BMIRequest(BaseModel):
