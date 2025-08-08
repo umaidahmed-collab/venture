@@ -28,6 +28,17 @@ Request:
 }
 ```
 
+Input validation:
+weight_kg: 1–500
+height_cm: 50–300
+Return 422 with details on invalid input
+
+BMI categories:
+<18.5: underweight
+18.5–24.9: normal
+25.0–29.9: overweight
+>=30.0: obese
+
 Response:
 ```json
 {
