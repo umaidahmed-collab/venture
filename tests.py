@@ -18,6 +18,18 @@ def test_bmi_endpoint():
     response = client.post("/api/v1/bmi", json={"weight_kg": 80, "height_cm": 0})
     assert response.status_code == 422
 
+    # Test with invalid input (weight_kg and height_cm out of range)
+    response = client.post("/api/v1/bmi", json={"weight_kg": 0, "height_cm": 0})
+    assert response.status_code == 422
+
+    # Test with invalid input (weight_kg is negative)
+    response = client.post("/api/v1/bmi", json={"weight_kg": -80, "height_cm": 180})
+    assert response.status_code == 422
+
+    # Test with invalid input (height_cm is negative)
+    response = client.post("/api/v1/bmi", json={"weight_kg": 80, "height_cm": -180})
+    assert response.status_code == 422
+
 def test_health_check_endpoint():
     response = client.get("/health")
     assert response.status_code == 200
