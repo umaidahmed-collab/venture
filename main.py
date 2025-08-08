@@ -11,9 +11,13 @@ class BMIResponse(BaseModel):
     bmi: float
     category: str
 
+from fastapi import HTTPException
+
 @app.post("/api/v1/bmi", response_model=BMIResponse)
 def calculate_bmi(request: BMIRequest):
     height_m = request.height_cm / 100
+    if height_m == 0:
+        raise HTTPException(status_code=400, detail="Height cannot be zero")
     bmi = request.weight_kg / (height_m ** 2)
     if bmi < 18.5:
         category = "underweight"
