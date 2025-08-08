@@ -13,8 +13,17 @@ class BMIResponse(BaseModel):
 
 @app.post("/api/v1/bmi", response_model=BMIResponse)
 def calculate_bmi(request: BMIRequest):
-    # TODO: Implement the BMI calculation and category determination
-    pass
+    height_m = request.height_cm / 100
+    bmi = request.weight_kg / (height_m ** 2)
+    if bmi < 18.5:
+        category = "underweight"
+    elif 18.5 <= bmi < 25:
+        category = "normal"
+    elif 25 <= bmi < 30:
+        category = "overweight"
+    else:
+        category = "obese"
+    return BMIResponse(bmi=round(bmi, 2), category=category)
 
 @app.get("/health")
 def health_check():
